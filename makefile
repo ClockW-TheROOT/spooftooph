@@ -9,7 +9,7 @@ BIN = /usr/bin
 all: spooftooph
 
 spooftooph:
-	$(CC) $(BT_LIB) $(NCURSES_LIB) $(PTHREAD) dev_class.c namelist.c spooftooph.c bdaddr.c oui.c -o spooftooph
+	$(CC) dev_class.c namelist.c spooftooph.c bdaddr.c oui.c $(NCURSES_LIB) $(PTHREAD) $(BT_LIB) -o spooftooph
 
 install:
 	cp spooftooph $(BIN)
